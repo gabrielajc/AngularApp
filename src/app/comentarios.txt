@@ -1,0 +1,670 @@
+data binding -> interligar ts com html no mesmo componente: 
+
+interpolação sempre feita do typescript pro html
+
+event binding - gera evento do html para o typescript
+quais sao os valores que estou digitando no elemento e passando como parametro pro inputKeyUP
+
+parametro.target.value
+
+módulo -> estrutura com varios componentes, parte de um sistema, por exemplo um módulo de vendas/de usuários
+
+para criar um novo modulo ng g m "nome"
+cria-se um novo componente com o ng g c "nome"
+
+para colocar componentes em modulos diferentes precisamos importar o modulo inteiro em app.module em imports, depois ir onde esta sendo importado, criar um metadado chamado exports e colocar ali o componente que pode ser reutilizado
+
+[] é array
+
+diretiva estrutural ngFor
+
+diretiva -> componente em typescript nativa o angular usada para alterar estrutura html
+
+toda diretiva começa com asterisrico, a diretiva ngFor por exemplo cria uma diretiva foreach laço de repetição
+
+todo forEach fala qual array original com todos os dados e como encrementa cada posição desse array
+
+let para declarar a proxima var "dados" e of pede a variavel completa
+
+
+  propert binding -> coloca colchetes na propriedade do elemento e nao e necessario interpolar o valor que sera atribuido a ele entre aspas na variavel / o componente filho recebe o valor da variavel pai
+
+  passar uma variavel de um componente a outro  não é possivel, podemos passar os dados isso se chama input/output 
+
+pra usar o input properts um componente deve ser filho do outro
+
+o @input sinaliza que a variavel apontada recebera os dados do componente pai
+
+input do pai pro filhop e caracterizado por concehete, e do filho pro pai (output) é com parenteses -> geração de eventos, o pai e apenas auma passagem de parametros
+
+output escuta o valor do componente filho / emite o evento que chama o metodo do pai, precida ter duas variaveis emitter.
+event emitter -> pertence ao pacote core, passa eventos pra frente com o .emit na variavel atribuida com tipo eventemitter
+
+
+ o split pega cada barrinha e divide, e retorna um array pra cada componente separado com barra e retorna um vetor
+
+COMPONENTE - nasce - executa metodos em sequencia - morre, eventos do ciclo de vida:
+ngOnChanges, ngOnInit(quando o componente é inicializado), ngOnCheck(a  cada ciclo de verificação de mudanças), ngAfterContentInit(depois de inserir conteudo exrterno no view), ngAfterContentChecked(a cada verificação de conteudo inserido), ngAfterViewChecked(verifica o conteudo da view e do filho), ngOnDestroy(deletar ciclo por exemplo com botao)
+
+mais utilizados
+constructor - cria objetos
+ngOnInit, metodo mais utilizado pois nele ocorrre a chamada do servidor pra poder obter os dados e mostrar no template
+ngOnChanges - usado principalmente com  input properts, toda vez que alterado algo dentro do componente esse método é chamado
+captura todas as mudanças dentro do componente, pra capturar as mudanças, os inputs properts somente sao disparados no ngOnChanges
+
+uma boa pratica e declarar todos os metodos
+
+pipe 
+//onde vamos receber o valor que nesse caso seria data de nascimento, e dentro do metodo onde iremos fazer toda manipulação do dado
+
+//onde vamos receber o valor que nesse caso seria data de nascimento, e dentro do metodo onde iremos fazer toda manipulação do dado
+  transform(value: string
+
+diretiva -> componente sem html,
+ngfor é uma diretiva nativa do angular, podemos criar nossas proprias diretivas pra alterar os componentes html
+
+//em alguns casos so precisamos alocar a variavel com o new quando a diretiva for utilizada, 
+//delega para o typescript de instanciar a variavel, so precisamos definir o nome e wo titulo e o angular se encarrga de instanciar
+//precisa colocar as variaveis no constructor 
+//nao precisamos colocar o el: elementRef = new ... pois com o constructor o angular ja faz isso
+//HostListener responsavel por mapear um evento que pode acontecer nesse elemento na diretiva, quando o mouse over acontecer, entra dentro do método
+
+para consultar uma api por angular temos que importar um modulo chamado http modulo
+
+httpmodule tem tudo que precisamos pra fazer as requisições das apis, configura a injeção de dependencia do httpclient - que é responsavel por fazer requisições da web
+ //this porque foi declarado no componente
+    this.varHttpClient.get
+
+    quando faz uma requisição pra API, temos sincrono e assincrono,
+
+    sincrona -> requisição que faz e dps espera a resposta
+
+    assincrono -> manda requisição pra pegar os dados, mas as coisas continuam executando, quando a resposta chega voce recebe uma notificação, ajudou pois nao deixa o usuario esperando/ é utilizado por padrão pelo angular
+
+
+    ngModel(propriedade)= representação de uma entidade, que pode ser campo simples ou objeto
+    ngmodelchange(evento/obter valor) - quando o evento for atualizado
+
+    two way data binding
+    quando queremos atualzar o código tanto no template quanto no componente
+    neste caso iremos usar tanto propert quanto event assim
+    [(ngModel)]
+
+  operador elves -> operador que colcamos em uma variavel pra quando for null impedir que pegue o resultado, entao sempre colocar o operador "?" após colcoar a variavel que tem parametro null atribuido como inicial
+
+  serviço
+
+  offset -> deslocar numero de registros depois do ? sao parametros na url
+  paginação -> busca toda a busca e divide em paginas pra melhorar a interação com o usuário
+
+=========================================================
+  ==criar botao anterior e proximo e select box com =quantos pokemons queremos mostrar na página seguinte
+  =evento de click
+  =duas variaveis pra guardar o offset e limit
+  =e alterar serviço passando parametros pra mostrar url =correto
+  
+========================================================
+
+modulo compartilhado, shared model, vai conter tudo que mais de um modulo possa precisar 
+
+rotas - modulo que permite fazer trocas na tela e passar sensação de sistema desktop, dependendo da rota / ele renderiza um componente especifico, mapeamento de componentes, mapeia um endereço ou componente na url e nao fz o refresh na tela inteira e sim somente no componente
+
+decorator viewChild -> permite conseguir acessar a variavel diretamente definida no html, faz associação entre a varaivel do template e a variavel do componente
+
+pra declarar uma variavel local basta colocar o # no campo do html
+
+diretivas
+ngif -> faz um comparativo, se verdadeiro ele existe, senao nao mostra o conteudo
+
+componente de roteamento
+
+injeção de dependencia: a declaração das variaveia sao colocadas no constructor,
+
+o modificador de acesso publico é recomendado quando outros metodos podem acessar o serviço, por boas praticas coloca private
+
+primeiro parametro: valor inicial do controle, o campo recebe esse valor, segundo sao os validadores
+
+angular forms prove recursos que acoplam ao html 
+
+this. faz referencia ao proprio componente
+
+ngfor - o proprio item que é repetido, o que vem depois do let é um nome atribuido no momento pra referenciar como sera puxado na interpolação e depois do of o nome da variavel do objeto, 
+já na interpolação a seguir, o primeiro é o nome atribuido no let e o segundo o item dentro do objeto
+
+quando tem objetos dentro do array tem q por . e o nome da propriedade na interpolação do html
+
+ng generate class cria uma classe pra atribuir propriedades assim voce pode importar essa classe pra qualquer componente que voce quiser, se colocaar publico, pode acessar normalmente com o this  
+
+propert binding
+input [value]="djjkhfksjh"
+quando colocado dessa maneira ele entende o que ha dentro do colchetes como uma expressão, entao o que é passado a seguir dentro das aspas ele entende como codigo ts, e retorna no html o proprio codigo ts sem precisar interpolar
+
+eventos de clique (click)
+todo evento pode ser adicionado com parenteses
+
+evento de teclado (input - o que e digitado, keyup- quando solta tecla
+)
+
+variavel auxiliar #antes da variavel no proprio html, mas ele so entra em ação é colocando um evento a seguir 
+
+------------------------------------------
+=========================================
+<table class="table">
+  <tr>
+      <th>Nome</th>
+      <th>URL</th>
+      <th>Mostrar Dados</th>
+  </tr>
+
+  <tr *ngFor="let p of pokemons?.results">
+      <!-- <td> {{ letrasMaiusculas(p.name) }} </td> -->
+      <td> {{ p.name | uppercase  }} </td>
+      <td> <a [href]="p.url" target="blank"> {{p.url}} </a> </td>
+      <td> <button class="btn btn-info" (click)="onSelecionarClick(p)" > Selecionar </button> </td>
+  </tr>
+
+</table>
+
+<div class="row">
+  <div class="col-5">
+      <button class="btn btn-primary" (click)="anterior()" *ngIf="!isAnteriorDisabled()"> Anterior </button> 
+      <button class="btn btn-primary" (click)="proximo()" [disabled]="isProximoDisabled()"> Próximo </button>
+  </div>
+
+  <div class="col-7">
+      <button class="btn btn-primary" (click)="addMaisOpcoes()" > Gerson </button> 
+      <select class="form-control" [(ngModel)]="limit" (change)="onSelectChange()">
+          <option *ngFor="let o of opcoes" [value]="o">{{o}}</option>
+      </select>
+  </div>
+</div>
+
+
+<p>
+  A quantidade de pokemons é igual a {{ pokemons?.count }}
+</p>
+
+<p>
+  Limite {{ limit }}
+</p>
+
+<app-detalhe-pokemons
+  *ngIf="pokemonSelecionadoPai"
+  [pokemonSelecionadoDetalhe]="pokemonSelecionadoPai"
+  (emitirIdPokemon)="receberIdFilho($event)"
+></app-detalhe-pokemons>
+
+<p>
+  {{ diaDeHoje | date : 'dd/MM/yyyy' }}
+</p>
+
+
+----------------------------------------------------------------------------pokemon.ts
+import { Component, OnInit } from '@angular/core';
+import { PokemonsService } from '../pokemons.service';
+
+@Component({
+selector: 'app-listar-pokemons',
+templateUrl: './listar-pokemons.component.html',
+styleUrls: ['./listar-pokemons.component.css']
+})
+export class ListarPokemonsComponent implements OnInit {
+
+pokemonSelecionadoPai : any = null;
+diaDeHoje = new Date();
+pokemons : any = null;
+offset : number = 0;
+limit : number = 30;
+
+opcoes = [10,20,30,40,50,1000];
+
+constructor(private pokemonService:PokemonsService) { }
+
+ngOnInit(): void {
+  //this.http.get("https://pokeapi.co/api/v2/pokemon")
+  this.pokemonService.getAll()
+  .subscribe(
+    (response) => {
+      this.pokemons = response
+    }
+  );
+}
+
+onSelecionarClick(results:any){
+  this.pokemonSelecionadoPai = results;
+}
+
+receberIdFilho(variavel : any){
+  alert("O ID do Filho é " + variavel)
+}
+
+letrasMaiusculas(texto: any){
+  return texto.toUpperCase();
+}
+
+anterior(){
+  this.offset -= this.limit;
+  if (this.offset< 0){
+    this.offset=0;
+  }
+
+  console.log(this.offset, this.limit)
+  this.pokemonService.getPaginado(this.offset,this.limit)
+    .subscribe(
+      (dados : any) => {
+        this.pokemons = dados;
+      }
+    );
+}
+
+proximo(){
+  // se o offset atual + limit for menor que 1118 (num max pokemons)
+  if ( (this.offset + this.limit) <= this.pokemons?.count  ){
+    this.offset += this.limit;
+  }
+
+  console.log(this.offset, this.limit)
+  this.pokemonService.getPaginado(this.offset,this.limit)
+    .subscribe(
+      (dados : any) => {
+        this.pokemons = dados;
+      }
+    );
+}
+
+onSelectClick(value:any){
+  console.log(value)
+}
+
+onSelectChange(){
+  this.pokemonService.getPaginado(this.offset,this.limit)
+    .subscribe(
+      (dados : any) => {
+        this.pokemons = dados;
+      }
+    );
+}
+
+isAnteriorDisabled(){
+  return this.offset <= 0;
+}
+isProximoDisabled(){
+  return (this.offset + this.limit) > this.pokemons?.count;
+}
+
+addMaisOpcoes(){
+  this.opcoes.push(500)
+}
+
+calcularNumPagina(){
+  let total = this.pokemons?.count;
+
+  let paginas = 0;
+
+  // if (total % this.limit == 0){
+  //   paginas = total/this.limit;
+  // }
+  // else {
+  //   paginas = total / this.limit + 1;
+  // }
+
+  paginas = (total % this.limit == 0) ? total/this.limit : total/this.limit + 1;
+ 
+}
+}
+
+-----------------------------------------------------
+=================================================
+
+<table class="table">
+  <tr>
+      <th>Nome</th>
+      <th>URL</th>
+      <th>Mostrar Dados</th>
+  </tr>
+
+  <tr *ngFor="let p of pokemons?.results">
+      <!-- <td> {{ letrasMaiusculas(p.name) }} </td> -->
+      <td> {{ p.name | uppercase  }} </td>
+      <td> <a [href]="p.url" target="blank"> {{p.url}} </a> </td>
+      <td> <button class="btn btn-info" (click)="onSelecionarClick(p)" > Selecionar </button> </td>
+  </tr>
+
+</table>
+
+<div class="row">
+  <div class="col-5">
+      <button class="btn btn-primary" (click)="anterior()" *ngIf="!isAnteriorDisabled()"> Anterior </button> 
+      <button class="btn btn-primary" (click)="proximo()" [disabled]="isProximoDisabled()"> Próximo </button>
+  </div>
+
+  <div class="col-7">
+      <button class="btn btn-primary" (click)="addMaisOpcoes()" > Gerson </button> 
+      <select class="form-control" [(ngModel)]="limit" (change)="onSelectChange()">
+          <option *ngFor="let o of opcoes" [value]="o">{{o}}</option>
+      </select>
+  </div>
+</div>
+
+
+<p>
+  A quantidade de pokemons é igual a {{ pokemons?.count }}
+</p>
+
+<p>
+  Limite {{ limit }}
+</p>
+
+<app-detalhe-pokemons
+  *ngIf="pokemonSelecionadoPai"
+  [pokemonSelecionadoDetalhe]="pokemonSelecionadoPai"
+  (emitirIdPokemon)="receberIdFilho($event)"
+></app-detalhe-pokemons>
+
+<p>
+  {{ diaDeHoje | date : 'dd/MM/yyyy' }}
+</p>
+
+
+----------------------------------------------------------------------------pokemon.ts
+import { Component, OnInit } from '@angular/core';
+import { PokemonsService } from '../pokemons.service';
+
+@Component({
+selector: 'app-listar-pokemons',
+templateUrl: './listar-pokemons.component.html',
+styleUrls: ['./listar-pokemons.component.css']
+})
+export class ListarPokemonsComponent implements OnInit {
+
+pokemonSelecionadoPai : any = null;
+diaDeHoje = new Date();
+pokemons : any = null;
+offset : number = 0;
+limit : number = 30;
+
+opcoes = [10,20,30,40,50,1000];
+
+constructor(private pokemonService:PokemonsService) { }
+
+ngOnInit(): void {
+  //this.http.get("https://pokeapi.co/api/v2/pokemon")
+  this.pokemonService.getAll()
+  .subscribe(
+    (response) => {
+      this.pokemons = response
+    }
+  );
+}
+
+onSelecionarClick(results:any){
+  this.pokemonSelecionadoPai = results;
+}
+
+receberIdFilho(variavel : any){
+  alert("O ID do Filho é " + variavel)
+}
+
+letrasMaiusculas(texto: any){
+  return texto.toUpperCase();
+}
+
+anterior(){
+  this.offset -= this.limit;
+  if (this.offset< 0){
+    this.offset=0;
+  }
+
+  console.log(this.offset, this.limit)
+  this.pokemonService.getPaginado(this.offset,this.limit)
+    .subscribe(
+      (dados : any) => {
+        this.pokemons = dados;
+      }
+    );
+}
+
+proximo(){
+  // se o offset atual + limit for menor que 1118 (num max pokemons)
+  if ( (this.offset + this.limit) <= this.pokemons?.count  ){
+    this.offset += this.limit;
+  }
+
+  console.log(this.offset, this.limit)
+  this.pokemonService.getPaginado(this.offset,this.limit)
+    .subscribe(
+      (dados : any) => {
+        this.pokemons = dados;
+      }
+    );
+}
+
+onSelectClick(value:any){
+  console.log(value)
+}
+
+onSelectChange(){
+  this.pokemonService.getPaginado(this.offset,this.limit)
+    .subscribe(
+      (dados : any) => {
+        this.pokemons = dados;
+      }
+    );
+}
+
+isAnteriorDisabled(){
+  return this.offset <= 0;
+}
+isProximoDisabled(){
+  return (this.offset + this.limit) > this.pokemons?.count;
+}
+
+addMaisOpcoes(){
+  this.opcoes.push(500)
+}
+
+calcularNumPagina(){
+  let total = this.pokemons?.count;
+
+  let paginas = 0;
+
+  // if (total % this.limit == 0){
+  //   paginas = total/this.limit;
+  // }
+  // else {
+  //   paginas = total / this.limit + 1;
+  // }
+
+  paginas = (total % this.limit == 0) ? total/this.limit : total/this.limit + 1;
+ 
+}
+}
+
+---------------------------------------------------
+==================================================
+
+
+
+event emitter quando tem hierarquia entre componentes do filho pro pai ja o 
+
+event é usado pra ligar o ts e html
+
+onde associa um componente a um modulo - no declarations do modo
+
+shared boa pratica de ter componentes reutilizaveis, diretivas e pipes,
+
+com minimas excessoes todos os modulos precisam de roteamento
+
+componente - mostrar coisas na tela
+serviço- se comunicar com api
+
+quando criamos o proprio pipe colocamos ele em um modulo
+
+requisições do angular por padrao sao assincronas
+ 
+o que recebe da api tem que ser dentro do subscribe e pra declarar variaveis dentro dela tem q ser dentro do arrow function
+
+injeção de dependencia - constructor
+injetar um serviço ou uma variavel 
+
+let só variavel local
+
+propertbind vc coloca um valor em um atributo desejado
+
+ngmodel é two way databinding
+
+n se pode usar ngmodel no formulario
+
+se nao tiver seletor de componente nao pode ser input propert
+
+direteiva é um componente sem html, altera o comportamento ou estrutura do html ngif, ngfor
+
+nativeElement - jeito de pegar o elemento, style, propriedade e valor
+
+renderer- adicionar uma classe
+adicionar um filho,
+setar uma propriedade
+adicionar ou remover uma classe
+
+
+httpclient traz as quisições 
+
+formularios - forms module e reactive forms module sao essenciais 
+
+objeto naoe e nulo - elvs - se for nulo retorna branco caso contrario retorna valor
+
+submit é tratado como evento de verdade entao o operador entre ele é event
+
+status do form control fica fora do control pois ele é do form, angular te da status do formulario ineiro e so estaara valid quando todos os controles estiverem validos.
+
+a propriedade value tem pra cada controle o valor que foi digitado. por isso pra enviar os dados do formulario tem que pegar o .value
+
+http client- 
+
+ //save é so um nome atribuido ao metodo
+
+ o caminho é o valor que esta dentro do console
+
+ o componente chama o serviço pra ajudar ele a chamar os dados pra ir 
+
+ as funçoes recebem parametros assim podemos usar isso pra passar de um arquivo pra outro
+
+*******************************************
+*******************************************
+*******************************************
+
+ existem varias formas de codgifcar -
+ tudo é um objeto e todos tem caracteristicas e com os objetos podemos fazer ações com else
+
+
+caracteristicas do objetos sao as variaveis, e as açoes que podemos tomar sao os metodos
+
+save por exemplo é uma ação, a ação pode ter parametros de saída e de entrada
+
+precisa dizer de onde esta puxando esse save 
+
+pra utilizar um serviço tem que injetar 
+pra injetar precisa ser no constructor do componente
+
+
+*******************************************
+
+o que significa o parenteses de uma ação - precisa receber parametros
+
+
+crud- 
+
+r - listagem - pega o componente chama o serviço renderiza tabela
+
+u -
+
+********************************
+p é a variavel que guarda cada elemento do array pra ele saber exatamente qual  linha deve apagar
+
+podemos isolar uma funçao de uma var dentro de um metodo
+
+chamar get all dps q deleta nao e uma boa pratica pois ta usando duas requisições
+
+modulo de roteamento, fz mapeamaento url e componente e faz essa substituiçao do codigo no router outlet
+
+query params -> parametros que podem ser passados pela url e não são obrigatórios
+quando clica em noticias essas coisas tem parametros pra poder atribuir tags ao usuário
+
+
+os parametros podem ser passados pela porpria url onde farao parte do endereço
+ele vem sempre depois da interrogação
+a interrogação é obrigatorio pra fazer a ligação
+o & adiciona mais query params seguido do outro
+
+no  path depois da barra aceita qualqurt tipo de coisa 
+pq os dois pontos antes sinalzia que é uma variavel 
+
+mecanismo de saber quais parametros dinamicos que foram passados na rota
+-> subscribe no params
+
+*******************************
+
+formulário ->
+injetar o formbuilder e import de forgroups
+metodos submit, controle e se é valido
+
+no modulo de rotas, as rotas estaticas sempre vem primeiro
+
+primeiro parametro do rouerlink é a rota e dps o parametro que vai concatenar
+pra definir esse parametro como o id de quem voce quer editar tem q pegar ,p.id
+
+*******************************
+
+editar os dados da api
+
+-> criar metodo editar
+passar no service retornando o patch que é a requisição 
+
+declarar um id do tipo number essa variavel vai gaurdar o id editado
+
+passa como parametro pro update
+
+navigate redireciona o fluxo da aplicação pra a url
+
+segundo arow function do subscribe é de erro
+
+*********************************************************************************************
+*********************************************************************************************
+*********************************************************************************************
+
+CRUD API
+
+_____________________________________________________________________________________________
+
+1 -> criar modulo
+
+2 -> importar o httpclientmodule(modulo com tudo que precisamos pra requisições das APIS)
+
+3 -> injeção de dependencia no constructor ts pois ele vai fazer a requisição na web e guardar os dados 
+
+4 -> chamadas de variavel dentro do oninit this.httpclient.get (get, requisição assincrona)
+
+5 -> subscribe, para capturar quando a resposta da requisição chegar dentro dos parametros (), o subscribe espera uma arrow function e executa ele ao receber o dado
+
+6 -> declarar variavel e pegar essa variavel no oninit e atribuir aos dados recebidos no subscribe
+
+7 -> criar tabela com ngfor com uma variavel recebendo dados da variavel que recebe os dados da api e interpolar na tabela
+
+8 -> criar serviço pra fazer a requisição pra API e injetar o http client e crair um objeto que vai ficar observando a API 
+
+9 -> declarar o serviço do tipo serviço dentro do constructor do ts e dentro do on init pegar o getall pra retornar o httpclient novamente
+
+10 -> criar rotas, no const routes nos dizemos qual rota vai pra qual modulo, criamos um objeto {} e designa um componente pro path
+
+----------------------------------------
+
+lasyload traz o codigo somente o qual precisamos 
+quando precisarmos dele, laodChildren
+
+------------------------------------------------
+
+canActivate espera um serviço onde iremos implementar a logica se  o usuario pode entrar ou não
+
+1 - cria-se serviço especifico apenas para a guarda de rotas
+
+interface - especifica a assinatura do metodo( nome e os parametros)

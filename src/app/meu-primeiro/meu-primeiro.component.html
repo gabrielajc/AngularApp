@@ -1,0 +1,25 @@
+<h2>Exercício do CPF:</h2>
+<p>
+  <label>CPF:</label>
+  <input type="text" [(ngModel)]="cpfDigitado" (blur)="onCpfBlur()" />
+</p>
+
+<p *ngIf="msgCpf != ''">
+  {{ msgCpf }}
+</p>
+
+<input [imask]="mask" [unmask]="true" />
+
+
+<div class="container">
+<input type="text" [(ngModel)]="valorDigitado" />
+
+<p>
+  {{ valorDigitado + '<3' }}
+</p>
+
+<p>
+  {{ getValor() }}
+</p>
+
+</div>

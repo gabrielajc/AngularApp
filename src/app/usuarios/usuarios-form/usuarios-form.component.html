@@ -1,0 +1,107 @@
+
+<p class="title" grifaTexto> Cadastro</p>
+<h2 grifaTexto></h2>
+<form [formGroup]="meuForm" (submit)="onSubmit()" >
+
+  <label for="exampleInputName1" class="form-label">Nome</label>
+  <input
+    type="text"
+    class="form-control"
+    [class.is-invalid]="isValid('nome')"
+    id="exampleInputName1"
+    aria-describedby="nomeUser"
+    formControlName="nome"
+  />
+
+  <label for="exampleInputEmail1" class="form-label">Email </label>
+  <input
+    type="email"
+    class="form-control"
+    [class.is-invalid]="isValid('email')"
+    id="exampleInputEmail1"
+    aria-describedby="emailHelp"
+    formControlName="email"
+  />
+
+
+<div class="mb-3">
+  <label for="exampleInputPassword" class="form-label">Senha</label>
+  <input
+    type="password"
+    class="form-control"
+    [class.is-invalid]="isValid('password')"
+    id="exampleInputPassword"
+    aria-describedby="passwordUser"
+    formControlName="senha"
+  />
+</div>
+
+<div class="mb-3">
+
+  <label
+    for="exampleInputText"
+    class="form-label"
+    aria-placeholder="Insira 1 ou 2..."
+    >Tipo de usuario</label
+  >
+  <input
+    type="text"
+    class="form-control"
+    id="exampleInputPassword"
+    aria-describedby="tipoUser"
+    formControlName="tipo_usuario"
+    placeholder="Tipo 1 ou 2.."
+  />
+</div>
+
+<div class="mb-3">
+  <label for="cep" class="form-label">CEP</label>
+  <input type="number" class="form-control" (blur)="buscarCEP()" id="cep" formControlName="cep" />
+  <label for="logradouro" class="form-label">Ba</label>
+  <input
+    type="text"
+    class="form-control"
+    id="log"
+    formControlName="logradouro"
+  />
+  <label for="numero" class="form-label">Número</label>
+  <input
+    type="number"
+    class="form-control"
+    id="num"
+    formControlName="numero"
+  />
+</div>
+<div class="mb-3">
+  <label for="complemento" class="form-label">Complemento</label>
+  <input
+    type="text"
+    class="form-control"
+    id="complemento"
+    formControlName="complemento"
+  />
+  <label for="cidade" class="form-label">Cidade</label>
+  <input type="text" class="form-control" id="log" formControlName="cidade" />
+  <label for="bairro" class="form-label">Bairro</label>
+  <input
+    type="text"
+    class="form-control"
+    id="bairro"
+    formControlName="bairro"
+  />
+  <label for="UF" class="form-label">UF</label>
+  <input type="text" class="form-control" id="uf" formControlName="estado" />
+</div>
+
+    <app-field-error
+        [deveMostrar]="isValid('nome')"
+        [controlFilho]="meuForm.controls['nome']"
+    ></app-field-error>
+
+
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="checkme">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+</form>

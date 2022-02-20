@@ -1,0 +1,16 @@
+<p>detalhe-usuario works!</p>
+<div class="card" *ngIf="usuarioSelecionadoDetalhe">
+  <div class="card-body">
+    <p class="card-text" grifaTexto>
+      Nome: {{ usuarioSelecionadoDetalhe.nome }}
+    </p>
+    <p class="card-text">
+      Sobrenome: {{ usuarioSelecionadoDetalhe.sobrenome }}
+    </p>
+    <p class="card-text">
+      <button class="btn btn-primary" (click)="onPlusClick()">+</button>
+      Idade : {{ usuarioSelecionadoDetalhe.idade }}
+      <button class="btn btn-primary" (click)="onLessClick()">-</button>
+    </p>
+  </div>
+</div>

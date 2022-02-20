@@ -1,0 +1,27 @@
+
+.title {
+  margin: 30px;
+  text-align: center;
+  letter-spacing: 2.5px;
+  font-size: 40px;
+  font-weight: 9000;
+  color: aliceblue;
+}
+
+.table{
+  font-size: 12px;
+  width: 110%;
+  color: aliceblue;
+  
+}
+
+table th{
+  background-color: rgba(0, 0, 0, 0.568);
+  color: rgb(255, 255, 255);
+
+  
+}
+
+n{
+  background-color: rgb(250, 160, 160) !important;
+}
