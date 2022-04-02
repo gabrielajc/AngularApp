@@ -11,6 +11,39 @@
   padding: 20px;
 }
 
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 140vh;
+}
+
+.list-group {
+  display: inline-block;
+  margin: auto;
+  width: auto;
+}
+
+.list-group-item-warning {
+  background-color: #060422;
+  color: aliceblue;
+}
+
+.list-group-item-danger {
+  background-color: #160422;
+  color: aliceblue;
+}
+
+.list-group-item-success {
+  background-color: #041022;
+  color: aliceblue;
+}
+
+.list-group-item-info {
+  background-color: #220413;
+  color: aliceblue;
+}
+
 .wrapper {
   background: linear-gradient(
     124deg,
