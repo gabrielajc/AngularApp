@@ -8,9 +8,8 @@ describe('ListarPokemonsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListarPokemonsComponent ]
-    })
-    .compileComponents();
+      declarations: [ListarPokemonsComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

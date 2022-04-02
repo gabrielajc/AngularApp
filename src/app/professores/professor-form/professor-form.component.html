@@ -1,35 +1,43 @@
-
-<p class="title" grifaTexto> Formulário de professores</p>
+<p class="title" grifaTexto>Formulário de professores</p>
 <h2 grifaTexto></h2>
-<form [formGroup]="meuForm" (submit)="onSubmit()" >
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" [class.is-invalid]="isValid('email')" id="exampleInputEmail1" formControlName="email" >
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+<form [formGroup]="meuForm" (submit)="onSubmit()">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      [class.is-invalid]="isValid('email')"
+      id="exampleInputEmail1"
+      formControlName="email"
+    />
+    <div id="emailHelp" class="form-text">
+      We'll never share your email with anyone else.
     </div>
+  </div>
 
-    <app-field-error 
-        [deveMostrar]="isValid('email')"
-        [controlFilho]="meuForm.controls['email']"
-    ></app-field-error>
-    
-   
-    
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="nome" formControlName="nome">
-    </div>
+  <app-field-error
+    [deveMostrar]="isValid('email')"
+    [controlFilho]="meuForm.controls['email']"
+  ></app-field-error>
 
-    <app-field-error 
-        [deveMostrar]="isValid('nome')"
-        [controlFilho]="meuForm.controls['nome']"
-    ></app-field-error>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Nome</label>
+    <input type="text" class="form-control" id="nome" formControlName="nome" />
+  </div>
 
-   
-    
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="checkme">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary" >Submit</button>
+  <app-field-error
+    [deveMostrar]="isValid('nome')"
+    [controlFilho]="meuForm.controls['nome']"
+  ></app-field-error>
+
+  <div class="mb-3 form-check">
+    <input
+      type="checkbox"
+      class="form-check-input"
+      id="exampleCheck1"
+      formControlName="checkme"
+    />
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>

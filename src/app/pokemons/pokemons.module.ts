@@ -16,8 +16,6 @@ import { BrowserModule } from '@angular/platform-browser';
     NgxPaginationModule,
     BrowserModule,
   ],
-  exports: [ListarPokemonsComponent,
-  DetalhePokemonsComponent],
-
+  exports: [ListarPokemonsComponent, DetalhePokemonsComponent],
 })
 export class PokemonsModule {}

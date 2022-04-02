@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-meu-primeiro',
   templateUrl: './meu-primeiro.component.html',
-  styleUrls: ['./meu-primeiro.component.css']
+  styleUrls: ['./meu-primeiro.component.css'],
 })
 export class MeuPrimeiroComponent implements OnInit {
   ngOnInit(): void {
@@ -14,56 +14,55 @@ export class MeuPrimeiroComponent implements OnInit {
   nome = 'Fabrizio';
   cor = 'vermelho';
   valorDigitado = '';
-  cpfDigitado : string = '';
-  msgCpf : string = '';
+  cpfDigitado: string = '';
+  msgCpf: string = '';
   public mask: any = {
     mask: '+{7} (000) 000-00-00',
-    lazy: false
+    lazy: false,
   };
 
   botaoClick() {
     alert('Uma mensagem');
-    console.log(this.testaCPF('27999620098'))
-    this.cor = (this.cor == 'azul' ? 'vermelho' : 'azul');
+    console.log(this.testaCPF('27999620098'));
+    this.cor = this.cor == 'azul' ? 'vermelho' : 'azul';
   }
-
 
   getValor() {
-    return 'BRQ';
+    let mensagem =
+      'Se você pode sonhar, você pode realizar... Basta acreditar.';
+    console.log(mensagem);
   }
 
-  onCpfBlur(){
-    let cpfValido = this.testaCPF( this.cpfDigitado );
+  onCpfBlur() {
+    let cpfValido = this.testaCPF(this.cpfDigitado);
 
-    if (cpfValido){
+    if (cpfValido) {
       this.msgCpf = 'CPF é Válido';
-    }
-    else {
+    } else {
       this.msgCpf = 'CPF não é válido';
     }
-
   }
-  
 
   testaCPF(strCPF: string) {
     var Soma;
     var Resto;
     Soma = 0;
-    if (strCPF == "00000000000") return false;
+    if (strCPF == '00000000000') return false;
 
-    for (let i = 1; i <= 9; i++) Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (11 - i);
+    for (let i = 1; i <= 9; i++)
+      Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (11 - i);
     Resto = (Soma * 10) % 11;
 
-    if ((Resto == 10) || (Resto == 11)) Resto = 0;
+    if (Resto == 10 || Resto == 11) Resto = 0;
     if (Resto != parseInt(strCPF.substring(9, 10))) return false;
 
     Soma = 0;
-    for (let i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (12 - i);
+    for (let i = 1; i <= 10; i++)
+      Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (12 - i);
     Resto = (Soma * 10) % 11;
 
-    if ((Resto == 10) || (Resto == 11)) Resto = 0;
+    if (Resto == 10 || Resto == 11) Resto = 0;
     if (Resto != parseInt(strCPF.substring(10, 11))) return false;
     return true;
   }
-
 }

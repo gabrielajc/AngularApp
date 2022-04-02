@@ -1,8 +1,8 @@
-export class TokenModel{
-  id : number;
+export class TokenModel {
+  id: number;
   sub: string;
   scopes: string;
   iat: number;
-  exp :number;
+  exp: number;
   name: string;
 }

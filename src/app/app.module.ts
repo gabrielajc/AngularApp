@@ -12,9 +12,10 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FirstComponent } from './first/first.component';
 
 @NgModule({
-  declarations: [AppComponent, MeuPrimeiroComponent],
+  declarations: [AppComponent, MeuPrimeiroComponent, FirstComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

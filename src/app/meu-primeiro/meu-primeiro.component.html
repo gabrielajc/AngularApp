@@ -1,25 +1,34 @@
-<h2>Exercício do CPF:</h2>
-<p>
-  <label>CPF:</label>
-  <input type="text" [(ngModel)]="cpfDigitado" (blur)="onCpfBlur()" />
-</p>
+<div class="mcontainer">
+  <h2>Digite o CPF pra saber se é um CPF existente.</h2>
+  <p>
+    <label>CPF:</label>
+    <input type="text" [(ngModel)]="cpfDigitado" (blur)="onCpfBlur()" />
+  </p>
 
-<p *ngIf="msgCpf != ''">
-  {{ msgCpf }}
-</p>
+  <p *ngIf="msgCpf != ''">
+    {{ msgCpf }}
+  </p>
 
-<input [imask]="mask" [unmask]="true" />
+  <br />
+  <br />
 
+  <h1>Digite o quer ler.</h1>
+  <input type="text" [(ngModel)]="valorDigitado" />
+  <p>
+    {{ valorDigitado + " -> Isso é o que você digitou" }}
+  </p>
 
-<div class="container">
-<input type="text" [(ngModel)]="valorDigitado" />
+  <br />
+  <br />
+  máscara de telefone
+  <br />
+  <input [imask]="mask" [unmask]="true" />
 
-<p>
-  {{ valorDigitado + '<3' }}
-</p>
+  <br />
+  <br />
 
-<p>
-  {{ getValor() }}
-</p>
-
+  <h1>Mensagem magica no console</h1>
+  <button (click)="getValor()">
+    Clique para ver uma mensagem no console (só é possivel ver no console)
+  </button>
 </div>

@@ -9,15 +9,18 @@ import { UsuariosRoutingModule } from './usuarios-routing.module';
 import { UsuariosFormComponent } from './usuarios-form/usuarios-form.component';
 
 @NgModule({
-  declarations: [ListarUsuariosComponent, DetalheUsuarioComponent, UsuariosFormComponent],
-
-
-  imports: [CommonModule, 
-    SharedModule, 
-    UsuariosRoutingModule,
-    HttpClientModule
+  declarations: [
+    ListarUsuariosComponent,
+    DetalheUsuarioComponent,
+    UsuariosFormComponent,
   ],
 
+  imports: [
+    CommonModule,
+    SharedModule,
+    UsuariosRoutingModule,
+    HttpClientModule,
+  ],
 
   exports: [ListarUsuariosComponent],
 })

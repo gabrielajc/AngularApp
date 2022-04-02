@@ -1,7 +1,7 @@
 p {
   text-align: center;
   font-size: 20px;
-  color: aliceblue  ;
+  color: aliceblue;
 }
 
 .paginate {
@@ -37,10 +37,10 @@ p {
   color: aliceblue;
 }
 
-table th{
+table th {
   background-color: rgba(0, 0, 0, 0.568);
   color: rgb(255, 255, 255);
 }
- table{
-   color: aliceblue;
- }
+table {
+  color: aliceblue;
+}
