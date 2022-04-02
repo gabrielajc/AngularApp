@@ -7,15 +7,14 @@ import { PokemonsService } from '../pokemons.service';
 })
 export class ListarPokemonsComponent implements OnInit {
   pokemonSelecionadoPai: any = null;
-  diaDeHoje: Date;
   pokemons: any = null;
   offset: number = 0;
-  limit: number = 30;
+  limit: number = 10;
 
   opcoes = [10, 20, 30, 40, 50, 1000];
 
   constructor(private pokemonService: PokemonsService) {
-    this.diaDeHoje = new Date();
+
   }
 
   ngOnInit(): void {

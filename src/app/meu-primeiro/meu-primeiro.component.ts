@@ -6,16 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./meu-primeiro.component.css'],
 })
 export class MeuPrimeiroComponent implements OnInit {
+
+  diaDeHoje: Date;
+
+  constructor() {
+    this.diaDeHoje = new Date();
+  }
+
+
   ngOnInit(): void {
     throw new Error('Method not implemented.');
+
   }
 
   title = 'curso de angular';
-  nome = 'Fabrizio';
+  nome = 'Gabriela';
   cor = 'vermelho';
   valorDigitado = '';
   cpfDigitado: string = '';
   msgCpf: string = '';
+
   public mask: any = {
     mask: '+{7} (000) 000-00-00',
     lazy: false,
