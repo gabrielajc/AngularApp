@@ -1,0 +1,52 @@
+<p grifaTexto class="title"> Lista de usuarios</p>
+
+<div class="col-lg-12" style="text-align: right;">
+
+  <button class="btn btn-warning"  [routerLink]="['/usuarios/new']" routerLinkActive="active">Adicionar Usuario
+
+  </button>
+
+</div>
+
+<div class="table-responsive">
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Nº</th>
+      <th>Complemento</th>
+      <th>Cidade</th>
+      <th>Bairro</th>
+      <th>UF</th>
+      <th>Ações</th>
+
+
+    </tr>
+
+
+    <tr
+      *ngFor="
+        let dados of usuarios" >
+
+      <td>{{ dados.id }}</td>
+      <td>{{ dados.nome }}</td>
+      <td>{{ dados.email }}</td>
+      <td>{{ dados.numero }}</td>
+      <td>{{ dados.complemento }}</td>
+      <td>{{ dados.cidade }}</td>
+      <td>{{ dados.bairro }}</td>
+      <td>{{ dados.estado }}</td>
+
+      <td>     <button class="btn btn-success" [routerLink]="['/usuarios', dados.id]">Editar</button>
+      <button class="btn btn-danger" (click)="onApagarClick(dados)">Apagar</button></td>
+
+
+
+
+    </table>
+
+
+
+
+</div>

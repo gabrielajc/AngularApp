@@ -1,0 +1,61 @@
+<p class="title">Pokemons</p>
+
+<table class="table">
+  <tr>
+    <th>Nome</th>
+    <th>URL</th>
+    <th>Mostrar Dados</th>
+  </tr>
+
+  <tr *ngFor="let p of pokemons?.results">
+    <td>{{ p.name }}</td>
+    <td>
+      <a [href]="p.url" target="blank"> {{ p.url }} </a>
+    </td>
+    <td>
+      <button class="btn btn-info" (click)="onSelecionarClick(p)">
+        Selecionar
+      </button>
+    </td>
+  </tr>
+</table>
+
+<div class="row">
+  <div class="col-5">
+    <button
+      class="btn btn-primary"
+      (click)="anterior()"
+      *ngIf="!isAnteriorDisabled()"
+    >
+      Anterior
+    </button>
+    <button
+      class="btn btn-primary"
+      (click)="proximo()"
+      [disabled]="isProximoDisabled()"
+    >
+      Próximo
+    </button>
+  </div>
+
+  <div class="col-7">
+    <button class="btn btn-primary" (click)="addMaisOpcoes()">
+      Quantidade por página
+    </button>
+    <select
+      class="form-control"
+      [(ngModel)]="limit"
+      (change)="onSelectChange()"
+    >
+      <option *ngFor="let o of opcoes" [value]="o">{{ o }}</option>
+    </select>
+  </div>
+</div>
+
+<p>A quantidade total de pokemons é igual a {{ pokemons?.count }}</p>
+
+<app-detalhe-pokemons
+  *ngIf="pokemonSelecionadoPai"
+  [pokemonSelecionadoDetalhe]="pokemonSelecionadoPai"
+  (emitirIdPokemon)="receberIdFilho($event)"
+></app-detalhe-pokemons>

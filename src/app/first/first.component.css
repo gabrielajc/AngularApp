@@ -1,0 +1,111 @@
+.mcontainer {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  text-shadow: 2px 2px black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 140vh;
+}
+
+.list-group {
+  display: inline-block;
+  margin: auto;
+  width: auto;
+}
+
+.list-group-item-warning {
+  background-color: #060422;
+  color: aliceblue;
+}
+
+.list-group-item-danger {
+  background-color: #160422;
+  color: aliceblue;
+}
+
+.list-group-item-success {
+  background-color: #041022;
+  color: aliceblue;
+}
+
+.list-group-item-info {
+  background-color: #220413;
+  color: aliceblue;
+}
+
+.wrapper {
+  background: linear-gradient(
+    124deg,
+    #b62853,
+    #e81d61,
+    #eb6e9e,
+    #f6f87e,
+    #71e083,
+    #1ddde8,
+    #2b1de8,
+    #9b56a1,
+    #eb5eeb
+  );
+  background-size: 1800% 1800%;
+
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+@-moz-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+@-o-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+@keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}

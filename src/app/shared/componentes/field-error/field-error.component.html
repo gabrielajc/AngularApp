@@ -1,0 +1,20 @@
+<div
+  class="alert alert-danger"
+  *ngIf="deveMostrar && controlFilho?.errors?.required == true"
+>
+  {{ fieldName }} deve ser preenchido.
+</div>
+
+<div class="alert alert-danger" *ngIf="controlFilho?.errors?.email">
+  {{ fieldName }} inválido
+</div>
+
+<div class="alert alert-danger" *ngIf="controlFilho?.errors?.minlength">
+  {{ fieldName }} precisa conter no minimo
+  {{ controlFilho?.errors?.minlength.requiredLength }} caracteres
+</div>
+
+<div class="alert alert-danger" *ngIf="controlFilho?.errors?.pattern">
+  {{ fieldName }} precisa conter no minimo 8 caracteres, letras maiúsculas e
+  minusculas, números e caracteres especiais(#?!@$ %^&*-).
+</div>

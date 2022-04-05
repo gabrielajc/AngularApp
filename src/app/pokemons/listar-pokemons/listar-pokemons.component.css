@@ -1,0 +1,46 @@
+p {
+  text-align: center;
+  font-size: 20px;
+  color: aliceblue;
+}
+
+.paginate {
+  margin-top: 30px;
+  margin-left: 320px;
+  color: aliceblue;
+}
+
+.quantidade {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.form-select {
+  max-width: 50%;
+  margin-left: 270px;
+  background-color: #5579c9;
+  color: rgb(255, 255, 255);
+}
+
+.data {
+  text-align: end;
+  color: aliceblue;
+}
+
+.title {
+  margin: 30px;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  color: aliceblue;
+}
+
+table th {
+  background-color: rgba(0, 0, 0, 0.568);
+  color: rgb(255, 255, 255);
+}
+table {
+  color: aliceblue;
+}

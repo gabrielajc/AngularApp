@@ -1,0 +1,44 @@
+<div class="mcontainer">
+  <button type="button" class="btn btn-warning" (click)="(diaDeHoje)">
+    Em que dia estamos?
+  </button>
+  <br />
+  <p>
+    {{ diaDeHoje | date: "dd/MM/yyyy" }}
+  </p>
+
+  <br /><br />
+
+  <h3>Digite o CPF pra saber se é um CPF existente.</h3>
+  <p>
+    <label>CPF:</label>
+    <input type="text" [(ngModel)]="cpfDigitado" (blur)="onCpfBlur()" />
+  </p>
+
+  <p *ngIf="msgCpf != ''">
+    {{ msgCpf }}
+  </p>
+
+  <br />
+  <br />
+
+  <h3>Digite o quer ler.</h3>
+  <input type="text" [(ngModel)]="valorDigitado" />
+  <p>
+    {{ valorDigitado + " -> Isso é o que você digitou" }}
+  </p>
+
+  <br />
+  <br />
+  Máscara de telefone
+  <br />
+  <input [imask]="mask" [unmask]="true" />
+
+  <br />
+  <br />
+
+  <h3>Mensagem mágica no console</h3>
+  <button type="button" class="btn btn-danger" (click)="getValor()">
+    Clique para ver uma mensagem no console (só é possivel ver no console)
+  </button>
+</div>

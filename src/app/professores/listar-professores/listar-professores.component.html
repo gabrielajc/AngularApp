@@ -1,0 +1,28 @@
+<p grifaTexto class="title"> Lista de professores</p>
+
+<div class="col-lg-12" style="text-align: right;">
+
+  <button class="btn btn-warning"  [routerLink]="['/professores/new']" routerLinkActive="active">Adicionar professor
+      
+  </button>
+
+</div>
+
+<table class="table">
+  <tr>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Deletar</th>
+
+  </tr>
+  <tr *ngFor="let p of professores">
+    <td>{{ p.id + 1 }}</td>
+    <td>{{ p.nome }}</td>
+    <td>{{ p.email }}</td>
+    <td>
+      <button class="btn btn-success " [routerLink]="['/professores', p.id]" >Editar</button>
+      <button class="btn btn-danger" (click)="onApagarClick(p)">Apagar</button></td>
+
+  </tr>
+</table>

@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+  background-color: rgb(11, 6, 29);
+  font-size: 20px;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+  color: aliceblue;
+  background-image: url(https://i.pinimg.com/564x/03/c0/cb/03c0cb976a624d831a721eccb2e59cfa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top 0;
+  background-blend-mode:overlay;
+  scroll-behavior: auto;
+}
