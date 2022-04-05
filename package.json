@@ -1,12 +1,9 @@
 {
-  "homepage":"http://gabrielajc.github.io/angularapp/",
   "name": "ng-test1",
   "version": "0.0.0",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "node server",
+    "build": "ng build --prod",
     "test": "ng test",
     "test-common": "ng test --browsers Chrome,Firefox",
     "test-ci": "ng test --watch=false --reporters junit --browsers ChromeHeadless",
@@ -15,6 +12,10 @@
     "e2e": "ng e2e",
     "api": "node ./server/server.js",
     "all": "concurrently \"npm run api\" \"npm run start\""
+  },
+  "engines": {
+    "node": "16.14.0",
+    "npm": "8.3.1"
   },
   "private": true,
   "dependencies": {
@@ -49,7 +50,7 @@
     "concurrently": "^7.0.0",
     "cors": "^2.8.5",
     "datauri": "^4.1.0",
-    "express": "^4.17.2",
+    "express": "^4.17.3",
     "jasmine-core": "~4.0.0",
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.3.10",
