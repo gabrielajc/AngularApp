@@ -1,16 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import jwt_decode from 'jwt-decode';
 import { environment } from 'src/environments/environment';
-import { AuthModel } from '../models/auth.model';
 
-import { jwt_decode } from 'jwt-decode';
+import { AuthModel } from '../models/auth.model';
 import { TokenModel } from '../models/token.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  urlApi = `${environment.urlApiGp}/usuarios/auth-token`;
+  urlApi = `${environment}/usuarios/auth-token`;
   constructor(private http: HttpClient) {}
 
   autenticar(email: string, senha: string) {

@@ -1,16 +1,22 @@
 import { TestBed } from '@angular/core/testing';
-
+import {
+  HttpClientTestingModule,
+  HttpTestingController
+} from '@angular/common/http/testing';
 import { FormulariosService } from './formularios.service';
 
 describe('FormulariosService', () => {
   let service: FormulariosService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [FormulariosService]
+    });
     service = TestBed.inject(FormulariosService);
   });
 
-  it('should be created', () => {
+  it('can load instance', () => {
     expect(service).toBeTruthy();
   });
 });
