@@ -53,9 +53,9 @@
 </div>
 
 <p>A quantidade total de pokemons é igual a {{ pokemons?.count }}</p>
-
 <app-detalhe-pokemons
   *ngIf="pokemonSelecionadoPai"
   [pokemonSelecionadoDetalhe]="pokemonSelecionadoPai"
   (emitirIdPokemon)="receberIdFilho($event)"
 ></app-detalhe-pokemons>
+
