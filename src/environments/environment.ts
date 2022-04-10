@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: true,
+  urlApiGp: 'http://cursos.grandeporte.com.br:8080',
 };
 
 /*
