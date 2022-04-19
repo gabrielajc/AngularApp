@@ -7,7 +7,6 @@
 ### :small_blue_diamond: About
 <h4> CRUD project generated with [Angular CLI](https://github.com/angular/angular-cli) with user and teacher registration in API, access to pokemon API capturing ID. And some tools generated with TYPESCRIPT and Angular CLI tools </h4>
 <i> Projeto CRUD gerado com  [Angular CLI](https://github.com/angular/angular-cli) com cadastro de usuários e professores em API, acesso a API de pokemons capturando ID. E algumas ferramentas geradas com TYPESCRIPT e ferramentas do Angular CLI </i>
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
 ### 🛠️ Technologies
 HTML, CSS, BOOTSTRAP, NODEJS, ANGULAR-CLI, TYPESCRIPT.
