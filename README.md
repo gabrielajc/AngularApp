@@ -1,6 +1,6 @@
 
 <h1 align="center"> AngularApp | CRUD </h1> 
-<p align="center"> <img src="https://img.shields.io/static/v1?label=Status&message=Finished&color=#008000&style=for-the-badge&logo=ghost"/> <img src="https://img.shields.io/badge/npm-8.3.1-orange"/> <img src="https://img.shields.io/github/license/gabrielajc/angularApp"/> <img src="https://img.shields.io/badge/Bootstrap-7.1.2-brightgreen"/> <img src="https://img.shields.io/static/v1?label=Netlify&message=deploy&color=pink&style=for-the-badge&logo=netlify"/>  <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white&style=for-the-badge&message=13.3.1&color=#008000"/> </p>
+<p align="center"> <img src="https://img.shields.io/static/v1?label=Status&message=Finished&color=#008000&style=for-the-badge&logo=ghost"/> <img src="https://img.shields.io/badge/npm-8.3.1-orange"/> <img src="https://img.shields.io/github/license/gabrielajc/angularApp"/> <img src="https://img.shields.io/badge/Bootstrap-7.1.2-brightgreen"/> <img src="https://img.shields.io/static/v1?label=Netlify&message=deploy&color=pink&style=for-the-badge&logo=netlify"/>  <img src="https://img.shields.io/static/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white&style=for-the-badge&message=13.3.1"/> </p>
 
 <h6> Status: Concluido :heavy_check_mark: </h6>
 
